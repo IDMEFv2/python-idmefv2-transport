@@ -19,6 +19,7 @@ Installation
 
 The following prerequisites must be installed on your system to install
 and use this library:
+
 * Python 3.6 or later
 * The Python `requests <https://pypi.org/project/requests/>` package
   (usually available as a system package under the name ``python3-requests``)
