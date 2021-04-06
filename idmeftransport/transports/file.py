@@ -74,8 +74,10 @@ class FileTransport(Transport):
             raise ValueError(value)
 
         value = conf['cast_to'](value)
-        if (conf['min'] is not None and value < conf['min']) or \
-           (conf['max'] is not None and value > conf['max']):
+        conf_min = conf.get('min')
+        conf_max = conf.get('max')
+        if (conf_min is not None and value < conf_min) or \
+           (conf_max is not None and value > conf_max):
             raise ValueError(value)
 
         with self.lock:
