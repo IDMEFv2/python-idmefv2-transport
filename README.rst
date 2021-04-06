@@ -85,7 +85,7 @@ unserialize them and store them in the queue.
 
 Example:
 
-..  sourcecode::
+..  sourcecode:: python
 
     import time
     from queue import Queue, Empty
