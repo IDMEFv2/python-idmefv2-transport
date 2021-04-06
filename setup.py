@@ -28,6 +28,7 @@ setup(
     ],
     install_requires=[
         "idmef",
+        "kafka-python",
         "requests",
         "setuptools",
     ],
@@ -37,6 +38,7 @@ setup(
             'file = idmeftransport.transports.file:FileTransport',
             'http = idmeftransport.transports.http:HTTPTransport',
             'https = idmeftransport.transports.http:HTTPTransport',
+            'kafka = idmeftransport.transports.kafka:KafkaTransport',
         ],
     },
 )

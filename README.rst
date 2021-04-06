@@ -22,6 +22,8 @@ and use this library:
 * Python 3.6 or later
 * The Python `requests <https://pypi.org/project/requests/>` package
   (usually available as a system package under the name ``python3-requests``)
+* The Python `kafka-python <https://pypi.org/project/kafka-python/>` package
+  (usually available as a system package under the name ``python3-kafka``)
 * The Python `idmef <https://github.com/SECEF/idmefv2-lib-model>` package
 
 To install the library, simply run:
