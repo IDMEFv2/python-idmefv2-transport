@@ -172,7 +172,7 @@ class HTTPTransport(Transport):
     def get_parameter(self, name: str):
         if not name in self.parameters:
             raise KeyError(name)
-  
+
         with self.lock:
             return getattr(self, name)
 

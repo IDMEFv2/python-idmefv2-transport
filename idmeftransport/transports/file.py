@@ -84,7 +84,7 @@ class FileTransport(Transport):
     def get_parameter(self, name: str):
         if not name in self.parameters:
             raise KeyError(name)
-  
+
         with self.lock:
             return getattr(self, name)
 
@@ -101,7 +101,7 @@ class FileTransport(Transport):
             gid = self.gid
         fd = os.open(filename, os.O_WRONLY | O_BINARY | O_NONBLOCK | O_EXLOCK | O_CREAT | O_EXCL, permissions)
         try:
-            if not O_EXLOCK: 
+            if not O_EXLOCK:
                 fcntl.lockf(fd, fcntl.LOCK_EX)
             try:
                 os.fchown(fd, uid, gid)
@@ -125,7 +125,7 @@ class FileTransport(Transport):
             # so that an exclusive lock can be obtained.
             fd = os.open(filename, os.O_RDWR | O_BINARY | O_NONBLOCK | O_EXLOCK, 0)
             try:
-                if not O_EXLOCK: 
+                if not O_EXLOCK:
                     fcntl.lockf(fd, fcntl.LOCK_EX)
                 try:
                     while True:
