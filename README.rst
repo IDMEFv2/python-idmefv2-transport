@@ -1,18 +1,20 @@
-IDMEFv2 Transport library
-#########################
+python-idmefv2-transport
+########################
 
-This repository contains a Python library that provides a common interface
-and various transport implementations that can be used to exchange security alerts
-encoded using the Intrusion Detection Message Exchange Format version 2 (IDMEFv2)
-between two systems/entities.
-It is part of the `SECEF <https://www.secef.net/>` project.
+A Python library that provides various transport implementations to exchange
+IDMEFv2 messages between two systems/entities.
+
+This code is currently in an experimental status and is regularly kept in sync
+with the development status of the IDMEFv2 format, as part of the
+`SECurity Exchange Format project <https://www.secef.net/>`_.
+
+IDMEFv2 messages can be created using the
+`python-idmefv2 <https://github.com/SECEF/python-idmefv2>`_ library.
 
 You can find more information about the previous version (v1) of the
-Intrusion Detection Message Exchange Format
-in `RFC 4765 <https://tools.ietf.org/html/rfc4765>`.
+Intrusion Detection Message Exchange Format in
+`RFC 4765 <https://tools.ietf.org/html/rfc4765>`_.
 
-Visit https://www.secef.net/ for more information about IDMEFv2's status
-and development progress.
 
 Installation
 ============
@@ -31,8 +33,7 @@ To install the library, simply run:
 
 ..  sourcecode:: sh
 
-    # Replace "python3" with the full path to the Python 3 interpreter
-    # if necessary.
+    # Replace "python3" with the full path to the Python 3 interpreter if necessary.
     sudo python3 install setup.py
 
 Usage
@@ -130,6 +131,7 @@ Contributions
 All contributions must be licensed under the BSD 2-clause license.
 See the LICENSE file inside this repository for more information.
 
-To improve coordination between the various contributors, we kindly ask
-that new contributors subscribe to the `SECEF mailing list
-<https://www.freelists.org/list/secef>` as a way to introduce themselves.
+To improve coordination between the various contributors,
+we kindly ask that new contributors subscribe to the
+`SECEF mailing list <https://www.freelists.org/list/secef>`_
+as a way to introduce themselves.
