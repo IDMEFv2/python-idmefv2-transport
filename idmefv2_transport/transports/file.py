@@ -8,7 +8,7 @@ import threading
 import time
 import warnings
 
-from idmef import Message, SerializedMessage, get_serializer
+from idmefv2 import Message, SerializedMessage, get_serializer
 from queue import Queue
 from typing import Optional
 from urllib.parse import urlparse, unquote

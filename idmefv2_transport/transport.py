@@ -6,7 +6,7 @@ import pkg_resources
 import warnings
 
 from collections.abc import Callable
-from idmef import Message
+from idmefv2 import Message
 from queue import Queue
 from typing import Optional
 
@@ -164,7 +164,7 @@ def get_transport(url: str, queue: Optional[Queue] = None, content_type: Optiona
 
     if _transports is None:
         _transports = {}
-        for entry_point in pkg_resources.iter_entry_points('idmef.transport'):
+        for entry_point in pkg_resources.iter_entry_points('idmefv2.transport'):
             try:
                 cls = entry_point.load()
                 if issubclass(cls, Transport):

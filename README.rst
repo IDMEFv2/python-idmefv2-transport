@@ -21,11 +21,11 @@ The following prerequisites must be installed on your system to install
 and use this library:
 
 * Python 3.6 or later
-* The Python `requests <https://pypi.org/project/requests/>` package
+* The Python `requests <https://pypi.org/project/requests/>`_ package
   (usually available as a system package under the name ``python3-requests``)
-* The Python `kafka-python <https://pypi.org/project/kafka-python/>` package
+* The Python `kafka-python <https://pypi.org/project/kafka-python/>`_ package
   (usually available as a system package under the name ``python3-kafka``)
-* The Python `idmef <https://github.com/SECEF/idmefv2-lib-model>` package
+* The Python `idmefv2 <https://github.com/SECEF/python-idmefv2>`_ package
 
 To install the library, simply run:
 
@@ -53,7 +53,7 @@ Example:
 ..  sourcecode:: python
 
     # Import the transport factory
-    from idmeftransport import get_transport
+    from idmefv2_transport import get_transport
 
     # Create an HTTP transport the sends IDMEFv2 messages to a remote SIEM
     # hosted at "siem.example.com". The call to start() ensures that the transport
@@ -65,7 +65,7 @@ Example:
     transport = get_transport('http://siem.example.com/', content_type="application/json")
     transport.start()
 
-    # Assuming "msg" refers to an instance of idmef.Message
+    # Assuming "msg" refers to an instance of idmefv2.Message
     transport.send_message(msg)
 
     # Shut the HTTP transport medium down after usage.
@@ -89,7 +89,7 @@ Example:
 
     import time
     from queue import Queue, Empty
-    from idmeftransport import get_transport
+    from idmefv2_transport import get_transport
 
     # Application initialization: create an empty queue and create
     # the transport medium.

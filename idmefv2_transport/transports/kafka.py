@@ -9,7 +9,7 @@ import threading
 import warnings
 
 from kafka import KafkaConsumer, KafkaProducer
-from idmef import Message, SerializedMessage, get_serializer
+from idmefv2 import Message, SerializedMessage, get_serializer
 from queue import Queue
 from typing import Optional
 from urllib.parse import urlparse

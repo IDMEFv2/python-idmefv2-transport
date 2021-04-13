@@ -13,7 +13,7 @@ import warnings
 
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from idmef import Message, SerializedMessage, get_serializer
+from idmefv2 import Message, SerializedMessage, get_serializer
 from queue import Queue
 from typing import Optional
 from urllib.parse import urlparse, unquote
@@ -94,8 +94,8 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
             #
             # We use _put() here to enqueue the items to avoid making
             # any assumption on the queue's implementation.
-            for idmef in messages:
-                queue._put(idmef)
+            for msg in messages:
+                queue._put(msg)
             queue.unfinished_tasks += nb_messages
             queue.not_empty.notify(nb_messages)
 

@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 VERSION = "0.0.0"
 
 setup(
-    name="idmeftransport",
+    name="idmefv2-transport",
     version=VERSION,
     maintainer="Prelude Team",
     maintainer_email="contact.secef@csgroup.eu",
@@ -27,18 +27,18 @@ setup(
         "Topic :: System :: Monitoring"
     ],
     install_requires=[
-        "idmef",
+        "idmefv2",
         "kafka-python",
         "requests",
         "setuptools",
     ],
     packages=find_packages("."),
     entry_points={
-        'idmef.transport': [
-            'file = idmeftransport.transports.file:FileTransport',
-            'http = idmeftransport.transports.http:HTTPTransport',
-            'https = idmeftransport.transports.http:HTTPTransport',
-            'kafka = idmeftransport.transports.kafka:KafkaTransport',
+        'idmefv2.transport': [
+            'file = idmefv2_transport.transports.file:FileTransport',
+            'http = idmefv2_transport.transports.http:HTTPTransport',
+            'https = idmefv2_transport.transports.http:HTTPTransport',
+            'kafka = idmefv2_transport.transports.kafka:KafkaTransport',
         ],
     },
 )
